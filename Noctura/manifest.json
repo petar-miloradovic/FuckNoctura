@@ -1,0 +1,46 @@
+{
+
+    "manifest_version": 3,
+    "name": "Noctura",
+    "version": "1.4.1",
+    "description": "Automation by Noctura",
+    "author": "Noctura",
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "action": {
+        "default_title": "Noctura Control Panel",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "permissions": ["tabs", "scripting", "storage", "debugger", "windows"],
+    "host_permissions": [
+        "https://www.wolvesville.com/*",
+        "https://script.google.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.wolvesville.com/*"],
+            "js": ["noctura.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["NocturaBg.png", "greenN.png", "blueN.png", "redN.png", "pinkN.png", "BWhite.png"],
+            "matches": ["https://www.wolvesville.com/*"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "licenses": [
+    {
+      "username": "petar",
+      "valid": true,
+      "role": null,
+      "expires": "2026-09-17",
+      "notes": "Admin account"
+    },
+    {
+      "username": "Kelloggs_",
+      "valid": true,
+      "role": null,
+      "expires": "2026-09-17",
+      "notes": "Regular account"
+    }
+  ],
+  "heartbeat": []
+}
